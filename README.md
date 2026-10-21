@@ -30,16 +30,10 @@ The primary dashboard provides a single-window summary of every character saved 
 - **Expiration Timers:** Displays exact remaining real-world time before instance resets occur.
 - **Completion Summary:** Shows boss progression ratios (e.g., 12/12 ICC, 4/4 RS, 5/5 ToGC) at a glance without needing to log onto each alt.
 
-### 2. Character Detail Panel
-A granular view focusing on an individual character's active lockouts and instance history.
-- **Boss Defeat Breakdown:** Lists every boss within a specific saved instance and identifies which remain alive or killed.
-- **Instance ID Tracker:** Displays the unique server Instance ID for active raids, allowing you to easily match raid IDs across alt groups or guild runs.
-- **Difficulty & Mode Indicators:** Clearly separates Normal and Heroic lockout variations across 10-player and 25-player sizes.
-
 ### 3. Options & Configuration Panel
 In-game settings menu to customize tracking behavior and maintain stored character data.
-- **Instance Filters:** Toggle tracking on or off for specific raids (Icecrown Citadel, Ruby Sanctum, Trial of the Grand Crusader, Vault of Archavon, Onyxia's Lair) or 5-man Heroic dungeons.
 - **Database Management:** Remove outdated or deleted characters from the tracking database with a single click.
+- **Ignore List:** ignore characters and specs you don't want listed in the main window. Good if you have bank alts that never raid.
 - **UI Customization:** Frame scale adjustments, background opacity toggles, and keybind assignments for fast window access.
 
 ---
