@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: SavedLockouts
+## Notes: Account-wide lockout tracker with class colors and text export.
+## Author: Copper
+## Version: 1.2
+## SavedVariables: SavedLockoutsDB
+
+SavedLockouts.lua
