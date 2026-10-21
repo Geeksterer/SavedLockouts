@@ -40,12 +40,30 @@ In-game settings menu to customize tracking behavior and maintain stored charact
 
 ## Changelog
 
+### v1.2.0
+* **Core Updates:**
+  * Expanded lockout tracking engine to cover 5-man Heroic daily dungeon resets alongside 10/25 raid lockouts.
+  * Added hover tooltips over instances in the Main Overview Panel for rapid boss status checks.
+  * Added expiration threshold color coding for lockouts resetting within 24 hours.
+* **UI & Performance:**
+  * Applied class-color formatting to character names across tracking windows.
+  * Added scale and opacity configuration options in the settings panel.
+  * Fixed an issue where instance lockout states failed to refresh automatically without a UI reload (`/reload`).
+  * Optimized SavedVariables table cleanup on logout to purge orphaned data.
+
+### v1.1.0
+* **Feature Additions:**
+  * Added Character Detail Panel to view individual boss kills and server Instance IDs.
+  * Added boss progression summary counters (e.g., `12/12 ICC`, `4/4 RS`, `5/5 ToGC`).
+  * Added automated database purge utilities to clean up deleted or inactive alt profiles.
+* **Fixes:**
+  * Resolved `nil` comparison error when opening the interface on a character with zero active lockouts.
+  * Fixed 10-man vs. 25-man Heroic difficulty ID parsing in `GetSavedInstanceInfo` for the 3.3.5 client API.
+
 ### v1.0.0
-* **Initial Release:** Complete core tracking engine for World of Warcraft 3.3.5.
-* **Features Implemented:**
-  * Multi-character lockout data caching across relogs and character swaps.
-  * Support for 10-man, 25-man, Normal, and Heroic raid lockouts.
-  * Main Overview Panel with cross-character status matrix.
-  * Character Detail Panel with specific boss kill logs and Instance IDs.
-  * Options panel for filtering tracked instances and purging alt data.
+* **Initial Release:**
+  * Initial release of SavedLockouts for World of Warcraft 3.3.5 (Interface: 30300) by Copper.
+  * Multi-character lockout tracking engine with SavedVariables persistence.
+  * Support for core 3.3.5 raids: Icecrown Citadel, Ruby Sanctum, Trial of the Grand Crusader, Vault of Archavon, and Onyxia's Lair.
+  * Main Overview Panel featuring cross-character lockout matrix and expiration timers.
   * Slash command integration (`/sl`).
