@@ -1,6 +1,6 @@
-# SavedLockouts
+# SavedLockouts v1.2
 
-A lightweight World of Warcraft 3.3.5 addon designed to track, aggregate, and display raid and dungeon lockouts across all characters on your account.
+A lightweight World of Warcraft 3.3.5a addon designed to track, manage, and export character raid and heroic dungeon lockouts across your entire account.
 
 **Author:** Copper  
 **Client Version:** World of Warcraft 3.3.5 (Interface: 30300)  
@@ -21,53 +21,28 @@ A lightweight World of Warcraft 3.3.5 addon designed to track, aggregate, and di
 
 ---
 
-## Panel Breakdown
+## Features
 
-### 1. Main Overview Panel
-The primary dashboard provides a single-window summary of every character saved in the database and their current lockout states.
-- **Character Matrix:** Displays a clean list of alts alongside active 10-man and 25-man raid lockouts.
-- **Status Indicators:** Uses color-coded text to immediately distinguish between available instances, active lockouts, and expiring timers.
-- **Expiration Timers:** Displays exact remaining real-world time before instance resets occur.
-- **Completion Summary:** Shows boss progression ratios (e.g., 12/12 ICC, 4/4 RS, 5/5 ToGC) at a glance without needing to log onto each alt.
+### Clean UI & Dashboard
+* **Main Instances Panel**: View all active character lockouts on your current realm at a glance, organized with class-colored names, talent specs, and factions.
+* **Dual View Modes**: Easily toggle between **Raids** and **Heroic 5-Mans** using the dedicated top-bar tabs.
+* **Minimap Button**: 
+  * **Left-Click**: Open the main instances panel.
+  * **Right-Click**: Open the configuration panel.
+  * Drag to reposition around the minimap freely.
+* **Slash Commands**: Quick access via `/lockouts`, `/sl`, or `/sl config` (also supports `options` or `opt`).
+* **Full ESC Support**: Pressing the Escape key cleanly closes any open addon window.
 
-### 3. Options & Configuration Panel
-In-game settings menu to customize tracking behavior and maintain stored character data.
-- **Database Management:** Remove outdated or deleted characters from the tracking database with a single click.
-- **Ignore List:** ignore characters and specs you don't want listed in the main window. Good if you have bank alts that never raid.
-- **UI Customization:** Frame scale adjustments, background opacity toggles, and keybind assignments for fast window access.
+### Config Panel & Ignore Lists
+* **Config Panel**: A centralized hub to access your ignore lists, data resets, help guides, and main panel toggle.
+* **Character & Spec Ignoring**: 
+  * Hide entire characters from being reported.
+  * Selectively ignore specific talent specs (Spec 1 or Spec 2) while keeping the character visible.
+  * Automatically handles duplicate talent tree names (e.g., dual protection specs) via strict slot-index tracking.
+  * Ignores and preferences persist safely even when lockouts expire or reset.
+* **Data Reset Protection**: Securely wipe all saved realm data using a Blizzard confirmation popup (`OK` / `CANCEL`).
 
----
-
-## Slash Commands
-
-- `/sl` or `/savedlockouts` — Toggle the Main Overview Panel.
-- `/sl config` — Open the Options & Configuration Panel.
-- `/sl reset` — Reset window positions to default.
-
----
-
-## Changelog
-
-### v1.2.0
-- **Core Updates:**
-  * Expanded lockout tracking engine to cover 5-man Heroic daily dungeon resets alongside 10/25 raid lockouts.
-    * Added expiration threshold color coding for lockouts resetting within 24 hours.
-- **UI & Performance:**
-  * Applied class-color formatting to character names across tracking windows.
-  * Fixed an issue where instance lockout states failed to refresh automatically without a UI reload (`/reload`).
-  * Optimized SavedVariables table cleanup on logout to purge orphaned data.
-
-### v1.1.0
-- **Feature Additions:**
-    * Added automated database purge utilities to clean up deleted or inactive alt profiles.
-- **Fixes:**
-  * Resolved `nil` comparison error when opening the interface on a character with zero active lockouts.
-  * Fixed 10-man vs. 25-man Heroic difficulty ID parsing in `GetSavedInstanceInfo` for the 3.3.5 client API.
-
-### v1.0.0
-- **Initial Release:**
-  * Initial release of SavedLockouts for World of Warcraft 3.3.5 (Interface: 30300) by Copper.
-  * Multi-character lockout tracking engine with SavedVariables persistence.
-  * Support for core 3.3.5 raids: Icecrown Citadel, Ruby Sanctum, Trial of the Grand Crusader, Vault of Archavon, and Onyxia's Lair.
-  * Main Overview Panel featuring cross-character lockout matrix and expiration timers.
-  * Slash command integration (`/sl`).
+### Flexible Data Export (Standard & Discord)
+* **Export Window**: Instantly generate clean, copy-pasteable summaries of your account lockouts.
+* **Discord Output Mode**: Check the **"Discord Output"** box to automatically format your export using Discord-compatible Markdown (`#` headers, `###` character titles, and clean bullet points) with zero leading hyphens or indentation glitches.
+* **Dynamic Versioning**: Automatically pulls the current version from your `.toc` file metadata.
