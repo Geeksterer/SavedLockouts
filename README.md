@@ -9,7 +9,7 @@ A lightweight World of Warcraft 3.3.5 addon designed to track, aggregate, and di
 
 ## Installation
 
-1. Download the latest `.zip` release file from the **Releases** tab on GitHub.
+1. Download the latest `.zip` release file from the green **Code** dropdown on GitHub.
 2. Extract the contents of the `.zip` archive on your computer.
 3. Drag or copy the extracted `SavedLockouts` folder directly into your World of Warcraft directory under `Interface\AddOns\`:
    ```text
